@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Manrope', sans-serif;
+}
+
+html, body {
+    background-size: cover;
+    padding: 2vh 8vw;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navigation Bar */
+
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+header * {
+    cursor: pointer;
+}
+
+header img:nth-child(2) {
+    display: none;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 2vw;
+}
+
+header ul li {
+    font-size: smaller;
+    font-weight: 500;
+    color: gray;
+}
+
+header ul li:hover {
+    color: #000;
+}
+
+header ul li button {
+    width: 120px;
+    height: 45px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    background-color: #ff6f00;
+}
+
+.main-article {
+    display: grid;
+    grid-template-columns: 35% auto;
+    gap: 4vw;
+    margin-top: 5vh;
+}
+
+.main-article > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.main-article > div > h2 {
+    font-size: 38px;
+}
+
+.main-article > div > p {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(101, 101, 101);
+}
+
+.main-article > div > div,
+.article-1 > div > div,
+.article-2 > div > div,
+.article-3 > div > div {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.main-article > div > div > div,
+.article-1 > div > div > div,
+.article-2 > div > div > div,
+.article-3 > div > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-article > div > div > figure,
+ .article-1 > div > div figure,
+ .article-2 > div > div figure,
+ .article-3 > div > div figure {
+    width: 55px;
+    height: 55px;
+}
+
+.main-article > div > div > div > span:nth-child(1), 
+.article-1 > div > div > div > span:nth-child(1),
+.article-2 > div > div > div > span:nth-child(1),
+.article-3 > div > div > div > span:nth-child(1) {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.main-article > div > div > div > span:nth-child(2),
+.article-1 > div > div > div > span:nth-child(2),
+.article-2 > div > div > div > span:nth-child(2),
+.article-3 > div > div > div > span:nth-child(2) {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(100, 100, 100);
+}
+
+/* Articles */
+
+.articles {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 10vh;
+    gap: 2vw;
+}
+
+.article-1,
+.article-2,
+.article-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+} 
+
+
+.article-1 > div,
+.article-2 > div,
+.article-3 > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.articles-1 > div > h2 {
+    font-size: 38px;
+}
+
+.article-1 > div > p,
+.article-2 > div > p,
+.article-3 > div > p {
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+    font-weight: 500;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+footer span {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(100, 100, 100);
+}
+
+/* For Small Laptops */
+@media screen and (max-width: 1200px) {
+    html, body {
+        padding: 2vh 4vw;
+    }
+
+    .main-article > div > h2 {
+        font-size: 34px;
+    }
+
+    .main-article > div > p {
+        font-size: 18px;
+    }
+
+    .main-article > div > div > figure {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .main-article > div > div > div > span:nth-child(1) {
+        font-size: 15px;
+    }
+    
+    .main-article > div > div > div > span:nth-child(2) {
+        font-size: 14px;
+    }
+}
+
+/* For Tablets */
+@media screen and (max-width: 768px) {
+    html, body {
+        padding: 2vh 2vw;
+    }
+
+    .main-article {
+        grid-template-columns: auto;
+        gap: 3vh;
+    }
+
+    .main-article > figure > img,
+    .article-1 > figure > img,
+    .article-2 > figure > img,
+    .article-3 > figure > img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+    .main-article > div {
+        gap: 2vh;
+    }
+
+    .articles {
+        grid-template-columns: auto;
+    }
+}
+
+/* For Mobile phones */
+@media screen and (max-width: 576px) {
+    html, body {
+        padding: 2vh 2vw;
+    }
+
+    header img:nth-child(2) {
+        display: block;
+        margin-left: auto;
+    }
+
+    header ul {
+        display:  none;
+        margin-left: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header ul li {
+        margin-top: 3vh;
+        justify-content: center;
+    }
+
+    .main-article > figure > img,
+    .article-1 > figure > img,
+    .article-2 > figure > img,
+    .article-3 > figure > img {
+        height: auto;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
